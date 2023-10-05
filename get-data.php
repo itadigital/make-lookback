@@ -37,7 +37,7 @@ curl_setopt($ch, CURLOPT_POST, 1);
 //Set the content type to application/json and pass in auth
 $headr = array();
 $headr[] = 'Content-Type: application/json';
-$headr[] = 'Authorization: Token 86cd309b-92ad-4025-965e-dcd15c9c2e62';
+$headr[] = 'Authorization: Bearer 86cd309b-92ad-4025-965e-dcd15c9c2e62';
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headr);
 
 curl_setopt($ch,CURLOPT_RETURNTRANSFER,TRUE);
