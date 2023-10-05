@@ -12,3 +12,4 @@ catch (HttpException $ex) {
     echo $ex;
 }*/
 echo 'hello';
+?>
