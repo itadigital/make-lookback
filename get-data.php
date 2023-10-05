@@ -15,22 +15,5 @@ catch (HttpException $ex) {
     echo $ex;
 }*/
 
-$request = new HttpRequest();
-$request->setUrl('https://eu1.make.com/api/v2/scenarios/111/run');
-$request->setMethod(HTTP_METH_POST);
-
-$request->setHeaders([
-  'Authorization' => 'Token abcdefab-1234-5678-abcd-112233445566'
-]);
-
-$request->setBody('{"data":{"Test input":"Test value","My array":["test 1","test 2"],"My collection":{"key":"value"}},"responsive":false}');
-
-try {
-  $response = $request->send();
-
-  echo $response->getBody();
-} catch (HttpException $ex) {
-  echo $ex;
-}
-
+echo 'hi';
 ?>
