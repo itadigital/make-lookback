@@ -40,10 +40,7 @@ foreach ($decoded as $item) {
             "total-company-recognitions-sent" => $item['total-company-recognitions-sent'] 
         );
       
-        $personItems[] = $myObj;
-
-        endforeach;
-    }
+        $personItems[] = $myObj;    }
     
 }
 
