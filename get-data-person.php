@@ -6,7 +6,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 $service_url = 'https://itagroup.hs.llnwd.net/o40/csg/year-end-recap/lookback-2023-vimeo.json';
-//$person = $_GET['personId'];
+$person = $_GET['personId'];
 
 $curl = curl_init($service_url);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
