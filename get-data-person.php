@@ -32,11 +32,11 @@ foreach ($decoded as $item) {
             "first-name" => $item['first-name'],
             "number-sent-recognitions" => $item['number-sent-recognitions'],
             "number-received-recognitions" => $item['number-received-recognitions'],
-            "total-value1-received" => "%",
-            "total-value2-received" => $item['total-value2-received'],
-            "total-value3-received" => $item['total-value3-received'],
-            "total-value4-received" => $item['total-value4-received'],
-            "total-value5-received" => $item['total-value5-received'],
+            "total-value1-received" => $item['total-value1-received'] . "%",
+            "total-value2-received" => $item['total-value2-received'] . "%",
+            "total-value3-received" => $item['total-value3-received'] . "%",
+            "total-value4-received" => $item['total-value4-received'] . "%",
+            "total-value5-received" => $item['total-value5-received'] . "%",
             "total-company-recognitions-sent" => $item['total-company-recognitions-sent'] 
         );
       
