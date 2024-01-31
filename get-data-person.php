@@ -29,22 +29,44 @@ if (isset($decoded->response->status) && $decoded->response->status == 'ERROR') 
 foreach ($decoded as $item) {
 
     if ($item['personid'] == $person) {
-        $myObj = array(
-            "personid" => $item['personid'],
-            "display-name" => $item['display-name'],
-            "first-name" => $item['first-name'],
-            "last-name" => $item['last-name'],
-            "yos" => $item['yos'],
-            "number-sent-recognitions" => $item['number-sent-recognitions'],
-            "number-received-recognitions" => $item['number-received-recognitions'],
-            "total-value1-received" => $item['total-value1-received'] . "%",
-            "total-value2-received" => $item['total-value2-received'] . "%",
-            "total-value3-received" => $item['total-value3-received'] . "%",
-            "total-value4-received" => $item['total-value4-received'] . "%",
-            "total-value5-received" => $item['total-value5-received'] . "%",
-            "total-company-recognitions-sent" => $item['total-company-recognitions-sent'] 
-        );
-      
+        $myObj = array("personid" => $item['personid']);
+        if (array_key_exists("display-name",$item)){
+            $myObj['display-name'] = $item['display-name'];
+        }
+        if (array_key_exists("first-name",$item)){
+            $myObj['first-name'] = $item['first-name'];
+        }
+        if (array_key_exists("last-name",$item)){
+            $myObj['last-name'] = $item['last-name'];
+        }
+        if (array_key_exists("yos",$item)){
+            $myObj['yos'] = $item['yos'];
+        }
+        if (array_key_exists("number-sent-recognitions",$item)){
+            $myObj['number-sent-recognitions'] = $item['number-sent-recognitions'];
+        }
+        if (array_key_exists("number-received-recognitions",$item)){
+            $myObj['number-received-recognitions'] = $item['number-received-recognitions'];
+        }
+        if (array_key_exists("total-value1-received",$item)){
+            $myObj['total-value1-received'] = $item['total-value1-received'];
+        }
+        if (array_key_exists("total-value2-received",$item)){
+            $myObj['total-value2-received'] = $item['total-value2-received'];
+        }
+        if (array_key_exists("total-value3-received",$item)){
+            $myObj['total-value3-received'] = $item['total-value3-received'];
+        }
+        if (array_key_exists("total-value4-received",$item)){
+            $myObj['total-value4-received'] = $item['total-value4-received'];
+        }
+        if (array_key_exists("total-value5-received",$item)){
+            $myObj['total-value5-received'] = $item['total-value5-received'];
+        }
+        if (array_key_exists("total-company-recognitions-sent",$item)){
+            $myObj['total-company-recognitions-sent'] = $item['total-company-recognitions-sent'];
+        }
+        
         $personItems[] = $myObj;
     }
     
