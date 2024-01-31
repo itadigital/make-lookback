@@ -8,7 +8,7 @@ error_reporting(E_ALL);
 $person = $_GET['personId'];
 $filename =  $_GET['data'];
 
-$service_url = 'https://itagroup.hs.llnwd.net/o40/csg/year-end-recap/' . $filename . '.json';
+$service_url = 'https://itagroup.hs.llnwd.net/o40/csg/video/dynamic/' . $filename . '.json';
 
 $curl = curl_init($service_url);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
@@ -31,7 +31,10 @@ foreach ($decoded as $item) {
     if ($item['personid'] == $person) {
         $myObj = array(
             "personid" => $item['personid'],
+            "display-name" => $item['display-name'],
             "first-name" => $item['first-name'],
+            "last-name" => $item['last-name'],
+            "yos" => $item['yos'],
             "number-sent-recognitions" => $item['number-sent-recognitions'],
             "number-received-recognitions" => $item['number-received-recognitions'],
             "total-value1-received" => $item['total-value1-received'] . "%",
