@@ -42,6 +42,9 @@ foreach ($decoded as $item) {
         if (array_key_exists("yos",$item)){
             $myObj['yos'] = $item['yos'];
         }
+        if (array_key_exists("yos-text",$item)){
+            $myObj['yos'] = $item['yos-text'];
+        }
         if (array_key_exists("number-sent-recognitions",$item)){
             $myObj['number-sent-recognitions'] = $item['number-sent-recognitions'];
         }
